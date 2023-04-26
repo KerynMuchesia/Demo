@@ -70,7 +70,7 @@ token = strtok(lineptr_copy, delim);
 for (i = 0; token != NULL; i++)
 {
 argv[i] = malloc(sizeof(char) * our_strlen(token, 1024) + 1);
-our_strcpy(argv[i], token);      
+our_strcpy(argv[i], token);
 token = strtok(NULL, delim);
 }
 argv[i] = NULL;

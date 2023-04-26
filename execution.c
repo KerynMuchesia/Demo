@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
-* execmd - executes a command
-* @argv: an array of pointers to the arguments
-* Return: returns the value of the last executed command
-*/
+ * execmd - executes a command
+ * @argv: an array of pointers to the arguments
+ * Return: returns the value of the last executed command
+ */
 void execmd(char **argv)
 {
 pid_t pid;
@@ -50,7 +50,7 @@ if (access(holder2[0], X_OK) == -1)
 {
 perror("access");
 return;
-}   
+}
 pid = fork();
 if (pid == 0)
 {

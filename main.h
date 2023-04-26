@@ -35,6 +35,8 @@ char our_strcpy(char *dest, const char *src);
 int tokenize_input(char *input_str, char **tokens,
 const char *delim, int max_tokens);
 size_t our_strlen(char *strn, size_t maxl);
-int our_strcmp(const char* str1, const char* str2);
-char our_strcat(char* destination, const char* source);
+int our_strcmp(const char *str1, const char *str2);
+char our_strcat(char *destination, const char *source);
+int our_puts(const char *__s);
+char *my_strdup(const char *str);
 #endif
