@@ -14,7 +14,7 @@ char *get_location(char *command)
         path_copy = strdup(path);
 
         /*Fetch the length of the command that was passed*/
-        command_length = strlen(command);
+        command_length = our_strlen(command);
 
         /*Breaking down the path variables and get all the directories present*/
         path_token = strtok(path_copy, ":");
@@ -26,10 +26,10 @@ char *get_location(char *command)
             file_path = malloc(command_length + directory_length + 2);
             /*NB the 2 was added for the slash and the null character*/
             /*Let's duplicate the directory path and merge it with the command to create the pathway for the command*/
-            strcpy(file_path, path_token);
-            strcat(file_path, "/");
-            strcat(file_path, command);
-            strcat(file_path, "\0");
+            our_strcpy(file_path, path_token);
+            our_strcat(file_path, "/");
+            our_strcat(file_path, command);
+            our_strcat(file_path, "\0");
 
             /*testing if the path actually exists and return it if it does, try the next directory*/
             if (stat(file_path, &buffer) == 0)

@@ -20,7 +20,7 @@ int main()
     /*printing the prompt character by character*/
     for (i = 0; prompt[i] != '\0'; i++)
     {
-      putchar(prompt[i]);
+      our_putchar(prompt[i]);
     }
     read_chars = getline(&lineptr, &m, stdin);
     /*checking if the getline function failed or reached EOF or user used CTRL + D*/
@@ -28,12 +28,12 @@ int main()
     {
       for (i = 0; "Exiting....\n"[i] != '\0'; i++)
       {
-        putchar("Exiting....\n"[i]);
+        our_putchar("Exiting....\n"[i]);
       }
       break;
     }
     /*checking if the user input is "Exiting...."*/
-    if (strcmp(lineptr, "Exiting....\n") == 0)
+    if (our_strcmp(lineptr, "Exiting....\n") == 0)
     {
       break;
     }
@@ -71,8 +71,8 @@ int main()
 
     for(i = 0; token != NULL; i++)
     {
-      argv[i] = malloc(sizeof(char) * strlen(token) + 1);
-      strcpy(argv[i], token);
+      argv[i] = malloc(sizeof(char) *our_strlen(token) + 1);
+      our_strcpy(argv[i], token);
       
       token = strtok(NULL, delim);
     }
