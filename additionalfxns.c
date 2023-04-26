@@ -6,28 +6,10 @@
  * Return -1 on error
  */
 
-void our_putchar(char c)
+int our_putchar(char c)
 {
   write(STDOUT_FILENO, &c, 1);
-}
-
-int main()
-{
-  our_putchar('H');
-  our_putchar('e');
-  our_putchar('l');
-  our_putchar('l');
-  our_putchar('o');
-  our_putchar(',');
-  our_putchar(' ');
-  our_putchar('w');
-  our_putchar('o');
-  our_putchar('r');
-  our_putchar('l');
-  our_putchar('d');
-  our_putchar('!');
-  our_putchar('\n');
-  return 0;
+  return (0);
 }
 /**
  * our_strcopy - Copies a string from source to destination
@@ -74,7 +56,7 @@ size_t our_strlen(char *strn, size_t maxl)
  *
  * Return: 0 if the strings are equal, -1 if s1 < s2, 1 if s1 > s2
  */
-int my_strcmp(const char* str1, const char* str2)
+int our_strcmp(const char* str1, const char* str2)
 {
   int i = 0;
   
@@ -97,7 +79,7 @@ int my_strcmp(const char* str1, const char* str2)
  *
  * Return: pointer to the destination string
  */
-void our_strcat(char* destination, const char* source)
+char our_strcat(char* destination, const char* source)
 {
     while (*destination != '\0')
 	{
@@ -110,4 +92,5 @@ void our_strcat(char* destination, const char* source)
         source++;
     }
     *destination = '\0';
+    return (0);
 }
